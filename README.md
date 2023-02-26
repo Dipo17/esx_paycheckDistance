@@ -1,0 +1,1 @@
+# Shit script but secure for people who want useless and boring paycheck distance for ESX
