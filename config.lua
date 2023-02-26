@@ -18,8 +18,10 @@ Config.Jobs = {
     },
     -- pos (position), dist (distance) and distMin (if the job need the minimum distance)
 }
+
 Config.Language = {
     Received = "You have received your salary",
     NotReceived = "Salary not received because you are not near the place where you work"
 }
+
 Config.Interval = 5 -- Time in minutes
