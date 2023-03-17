@@ -12,16 +12,13 @@ CreateThread(function()
 			if configJob.distMin then
 				local coords = xPlayer.getCoords()
 				if #(vector3(coords.x, coords.y, coords.z) - configJob.pos) > configJob.dist then
-					allowed = false
+					xPlayer.showNotification(Config.Language.NotReceived)
+					goto next
 				end
 			end
-			if allowed then
-				xPlayer.addAccountMoney("bank", xPlayer.job.grade_salary)
-				xPlayer.showNotification(Config.Language.Received)
-				goto next
-			end
-
-			xPlayer.showNotification(Config.Language.NotReceived)
+			xPlayer.addAccountMoney("bank", xPlayer.job.grade_salary)
+			xPlayer.showNotification(Config.Language.Received)
+			
 			::next::
 		end
 		Wait(60 * 1000 * Config.Interval)
